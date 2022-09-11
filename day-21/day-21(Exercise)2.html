@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1 class="heading">Asabeneh Yetayeh challenges in <strong>2020</strong></h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <div class="p-parent">
+            <p></p>
+        </div>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+
+    <script>
+
+        let yearText = document.querySelector('strong')
+        yearText.style.fontSize = '40px'
+
+        // generate color
+
+        let generateColor = () => {
+            let alphanums = '0123456789abcdef'
+            let colorArr = []
+            for (let i = 0; i < 6; i++) {
+                let random = parseInt(Math.random() * alphanums.length)
+                colorArr.push(alphanums[random])
+            }
+            return '#' + colorArr.join('')
+        }
+
+        // adding color to 2020
+        setInterval(() => {
+            yearText.style.color = generateColor()
+        }, 1000);
+
+        let h1 = document.querySelector('h1')
+        h1.style.fontSize = '15px'
+        h1.style.fontFamily = 'sans-serif'
+        h1.style.fontWeight = 'bold'
+        h1.style.textAlign = 'center'
+
+        let h2 = document.querySelector('h2')
+        h2.style.color = 'grey'
+        h2.style.fontSize = '16px'
+        h2.style.fontFamily = 'sans-serif'
+        h2.style.fontWeight = 'bold'
+        h2.style.textAlign = 'center'
+        h2.style.textDecoration = 'underline'
+        h2.style.fontFamily = 'sans-serif'
+
+        // getting date
+        const getDate = () => {
+            let today = new Date()
+            let hours = today.getHours()
+            let minutes = today.getMinutes()
+            let seconds = today.getSeconds()
+            let date = today.getDate()
+            let month = today.getMonth()
+            let year = today.getFullYear()
+
+            let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+            date = date < 10 ? '0' + date.toString() : date
+            hours = hours < 10 ? '0' + hours.toString() : hours
+            minutes = minutes < 10 ? '0' + minutes.toString() : minutes
+            seconds = seconds < 10 ? '0' + seconds.toString() : seconds
+
+            return `${months[month]} ${date}, ${year} ${hours}:${minutes}:${seconds}`
+        }
+
+
+        let p = document.querySelector('p')
+        p.textContent = getDate()
+        p.style.textAlign = 'center'
+        p.style.fontSize = '12px'
+        setInterval(() => {
+            p.style.backgroundColor = generateColor()
+        }, 1000)
+        p.style.paddingTop = '10px'
+        p.style.paddingBottom = '10px'
+        p.style.paddingLeft = '20px'
+        p.style.paddingRight = '20px'
+        p.style.fontFamily = 'sans-serif'
+
+        let pParent = document.querySelector('.p-parent')
+        pParent.style.margin = 'auto'
+        pParent.style.width = '20%'
+
+        let listParent  = document.querySelector('ul')
+        listParent.style.margin = 'auto'
+        listParent.style.width = '50%'
+
+        let list = document.querySelectorAll('li')
+        
+        list.forEach(li => {
+            li.style.fontFamily = 'sans-serif'
+            li.style.fontsize = '14px'
+            li.style.listStyle = 'none'
+            li.style.paddingTop = '10px'
+            li.style.paddingBottom = '10px'
+            li.style.paddingLeft = '20px'
+            li.style.paddingRight = '20px'
+            li.style.marginBottom = '10px'
+
+           if(li.innerText.endsWith('Done')){
+                li.style.backgroundColor = '#228b22'
+           } else if (li.innerText.endsWith('Coming')){
+                li.style.backgroundColor = '#DC143C'
+           } else {
+                li.style.backgroundColor = '#FFFF00'
+           }
+            
+        })
+
+        
+
+    </script>
+</body>
+
+</html>

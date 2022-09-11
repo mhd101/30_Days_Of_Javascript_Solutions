@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 23 Challenge</title>
+</head>
+
+<body>
+    <!-- Question 1 -->
+    <!-- <div>
+        <div class="heading-cont">
+            <h1 class="heading-1">Number Generator</h1>
+            <p class="heading-2">30 Days of Javascript:DOM</p>
+        </div>
+
+        <div class="mainDiv">
+                <div class="input-main">
+                    <p class="input-err"></p>
+                    <div class="input-cont">
+                        <input type="text" id="input" placeholder="Generate more numbers...">
+                        <button id="btn">Generate Number</button>
+                    </div>
+                </div>
+        </div>
+    </div> -->
+
+    <!-- Question 2 -->
+
+
+
+    <script>
+
+        // 1
+
+        // const heading = document.querySelector('.heading-1')
+        // heading.style.color = '#228b22'
+        // heading.style.fontFamily = 'Roboto'
+        // heading.style.fontSize = '40px'
+
+        // const subHeading = document.querySelector('.heading-2')
+        // subHeading.style.color = 'black'
+        // subHeading.style.fontFamily = 'Roboto'
+        // subHeading.style.fontSize = '24px'
+        // subHeading.style.marginTop = '-20px'
+
+
+        // const headingContainer = document.querySelector('.heading-cont')
+        // headingContainer.style.display = 'flex'
+        // headingContainer.style.flexDirection = 'column'
+        // headingContainer.style.justifyContent = 'center'
+        // headingContainer.style.alignItems = 'center'
+
+        // const p = document.querySelector('.input-err')
+
+        // const input = document.querySelector('#input')
+        // input.style.border = '2px solid #228b22'
+        // input.style.width = '500px'
+        // input.style.padding = '10px 10px';
+        // input.style.fontFamily = 'Roboto'
+
+        // const button = document.querySelector('#btn')
+        // button.style.backgroundColor = '#228b22'
+        // button.style.border = 'none'
+        // button.style.color = 'white'
+        // button.style.fontFamily = 'Roboto'
+        // button.style.padding = '10px 15px'
+        // button.style.fontSize = '18px'
+
+        // const inputContainer = document.querySelector('.input-cont')
+        // inputContainer.style.display = 'flex'
+        // inputContainer.style.justifyContent = 'center'
+
+        // const inputMain = document.querySelector('.input-main')
+        // inputMain.style.display = 'flex'
+        // inputMain.style.flexDirection = 'column'
+        // inputMain.style.alignItems = 'start'
+        // inputMain.style.width = '40%'
+        // inputMain.style.margin = '0 auto'
+
+
+        // // Generate Number function
+
+        // let isPrime = n => {
+        //     if (n == 1 || n == 0) return false;
+        //     if (n == 2 || n == 3) return true;
+
+        //     for (let i = 2; i <= Math.sqrt(n); i++) {
+        //         if (n % i == 0) return false;
+
+        //     }
+        //     return true;
+        // }
+
+
+        // let numbercontainer = document.createElement('div')
+        // document.body.append(numbercontainer)
+        // numbercontainer.style.marginTop = '30px'
+
+        // let generateNumbers = numCount => {
+        //     let secondDiv = document.createElement('div')
+        //     secondDiv.style.width = '80%'
+        //     secondDiv.style.margin = '0 auto'
+        //     numbercontainer.append(secondDiv)
+        //     for (let i = 0; i <= numCount; i++) {
+        //         let a = document.createElement('a')
+        //         secondDiv.append(a)
+        //         a.textContent = i;
+        //         a.style.padding = '10px'
+        //         a.style.textAlign = 'center'
+        //         if (i % 2 == 0) {
+        //             a.textContent = i
+        //             a.style.backgroundColor = '#42b845'
+        //             a.style.display = 'inline-block'
+        //             a.style.padding = '10px'
+        //             a.style.fontSize = '18px'
+        //             a.style.margin = '2px'
+        //             a.style.width = '20px'
+        //             a.style.textAlign = 'center'
+        //         } else if (isPrime(i)) {
+        //             a.textContent = i;
+        //             a.style.backgroundColor = '#f76262'
+        //             a.style.display = 'inline-block'
+        //             a.style.padding = '10px'
+        //             a.style.fontSize = '18px'
+        //             a.style.margin = '2px'
+        //             a.style.width = '20px'
+        //             a.style.textAlign = 'center'
+        //         } else {
+        //             a.textContent = i;
+        //             a.style.backgroundColor = '#fee904'
+        //             a.style.display = 'inline-block'
+        //             a.style.padding = '10px'
+        //             a.style.fontSize = '18px'
+        //             a.style.margin = '2px'
+        //             a.style.width = '20px'
+        //             a.style.textAlign = 'center'
+        //         }
+        //     }
+
+        // }
+
+        // button.addEventListener('click', key => {
+        //     let value = parseInt(input.value)
+        //     if (value > 0) {
+        //         p.textContent = '';
+        //         generateNumbers(value)
+        //     } else {
+        //         p.textContent = 'Enter number value on the input field to generate numbers'
+        //         p.style.color = 'red'
+        //         p.style.fontFamily = 'Roboto'
+        //     }
+        // })
+
+        // input.addEventListener('keypress', e => {
+        //     numbercontainer.textContent = ''
+        // })
+
+
+        // 2
+
+        const mainDiv = document.createElement('div')
+        document.body.append(mainDiv)
+        mainDiv.style.display = 'flex'
+        mainDiv.style.flexDirection = 'column'
+        mainDiv.style.justifyContent = 'center'
+        mainDiv.style.alignItems = 'center'
+        mainDiv.style.height = '90vh'
+
+        const header = document.createElement('h1')
+        mainDiv.append(header)
+
+        header.textContent = 'Press any Keyboard Key'
+        header.style.fontFamily = 'Roboto'
+        header.style.color = '#424242'
+        header.style.fontSize = '50px'
+        header.style.backgroundColor = 'white'
+        header.style.borderRadius = '2px'
+        header.style.boxShadow = '1px 1px 10px #424242'
+        header.style.padding = '25px 50px'
+        header.style.textAlign = 'center'
+        header.style.width = '60%'
+
+        const p = document.createElement('p')
+        mainDiv.append(p)
+
+        document.body.addEventListener('keydown', () => {
+            if (event.which == 32) {
+                header.innerHTML = `You Pressed <span>Space</span>`
+                const span = document.querySelector('span')
+                span.style.color = '#5bbc7a'
+            } else {
+                header.innerHTML = `You pressed <span>${event.key}</span>`
+                const span = document.querySelector('span')
+                span.style.color = '#5bbc7a'
+            }
+
+            p.textContent = event.which
+            p.style.color = '#5bbc7a'
+            p.style.fontFamily = 'Roboto'
+            p.style.backgroundColor = 'white'
+            p.style.boxShadow = '1px 1px 10px #424242'
+            p.style.padding = '50px 50px'
+            p.style.borderRadius = '2px'
+            p.style.textAlign = 'center'
+            p.style.width = '10%'
+            p.style.fontSize = '50px'
+            
+        })
+
+    </script>
+</body>
+
+</html>

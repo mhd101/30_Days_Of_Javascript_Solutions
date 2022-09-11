@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18 Challenge</title>
+</head>
+
+<body>
+    <script>
+
+        // LEVEL 01 - Day 18
+
+        // 1
+
+        // const url = 'https://restcountries.com/v2/all';
+
+
+        // const allCountries = fetch(url).then(response => response.json()).then(countries => countries.forEach(x => console.log(`${x.name} ${x.capital} ${x.population} ${x.area}`))).catch(err => console.warn(err));
+
+        // LEVEL 02 - Day 18
+
+        // 1
+
+        // Using Promises 
+
+        const catsAPI = 'https://api.thecatapi.com/v1/breeds';
+
+        // const catNames = fetch(catsAPI).then(response => response.json()).then(data => data.forEach(x => console.log(x.name))).catch(err => console.warn(err));
+
+        // console.log(catNames);
+
+        // Using Await and Async
+
+        // const catNames = async () => {
+        //     try {
+        //         const response = await fetch('https://api.thecatapi.com/v1/breeds')
+        //         const names = await response.json()
+        //         const name = names.forEach(x => console.log(x.name))
+        //         console.log(name)
+        //     } catch (error) {
+        //         console.warn(error)
+        //     }
+        // }
+
+        // catNames();
+
+        // LEVEL 03 - Day 18
+
+        // 1
+
+        // const cat = fetch(catsAPI).then(response => response.json()).then(data => data.forEach(x => {
+        //     let arrOfWeight = (x.weight.metric).split(' ');
+        //     let numOne = parseInt(arrOfWeight[0])
+        //     let numTwo = parseInt(arrOfWeight[2])
+        //     let sum = 0;
+        //     for(let i=numOne; i <= numTwo; i++){
+        //         sum += i;
+        //     }
+        //     let avgWgt = Math.floor(sum / 3);
+        //     console.log(`CatName: ${x.name}\nAvgWeight: ${avgWgt}`)
+
+        // })).catch(err => console.warn(err));
+
+        // 2
+
+        // const fetchData = async () => {
+        //     try {
+        //         const response = await fetch('https://restcountries.com/v2/all')
+        //         const countries = await response.json()
+        //         const countriesData = countries.sort((a, b) => {
+        //             if (a.area < b.area) return 1;
+        //             if (a.area > b.area) return -1;
+        //             return 0;
+        //         });
+        //         const tenLargestCountries = [];
+        //         const sortedCountries = countriesData.map(x => tenLargestCountries.push({Country: x.name, Area: x.area}))
+
+        //         console.log(tenLargestCountries.slice(0,10))
+
+        //     } catch (error) {
+        //         console.warn(error)
+        //     }
+        // }
+
+        // fetchData();
+
+        // 3
+
+        const fetchData = async () => {
+            try {
+                const response = await fetch('https://restcountries.com/v2/all');
+                const countries = await response.json();
+
+
+                const totalLanguages = (countries.reduce((lang, obj) => {
+                    obj.languages.forEach(x => lang.push(x.name));
+                    return lang;
+                }, [])).reduce((count, lang) => {
+                    count[lang] = (count[lang] || 0) + 1;
+                    return count;
+                }, {});
+
+                const sortedCountries = Object.entries(totalLanguages).sort((a,b) => b[1]-a[1]).slice(0,1);
+
+
+                console.log(`${sortedCountries[0][0]} is used as a official language in the world`);
+
+            } catch (error) {
+                console.warn(error);
+            }
+        }
+
+        fetchData();
+
+    </script>
+</body>
+
+</html>

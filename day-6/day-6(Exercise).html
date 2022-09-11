@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 06 Challenge</title>
+</head>
+
+<body>
+    <script>
+
+        const countries = [
+            'Albania',
+            'Bolivia',
+            'Canada',
+            'Denmark',
+            'Ethiopia',
+            'Finland',
+            'Germany',
+            'Hungary',
+            'Ireland',
+            'Japan',
+            'Kenya'
+        ];
+
+        const webTechs = [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Redux',
+            'Node',
+            'MongoDB'
+        ];
+
+        const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
+
+
+        // LEVEL 1 - Day 06
+
+        // 1
+
+        // for(let i = 0; i <= 10; i++){
+        //     console.log(i);
+        // }
+
+        // let i = 0;
+        // while(i<=10){
+        //     console.log(i);
+        //     i++;
+        // }
+
+        // let i = 0;
+        // do{
+        //     console.log(i);
+        //     i++;
+        // }while(i<=10);
+
+        // 2
+
+        // for(let i = 10; i>=0; i--){
+        //     console.log(i);
+        // }
+
+        // let i = 10;
+        // while(i>=0){
+        //     console.log(i);
+        //     i--;
+        // }
+
+        // let i = 10;
+        // do{
+        //     console.log(i);
+        //     i--;
+        // }while(i>=0);
+
+        // 3
+
+        let n = 3;
+        for (let i = 0; i <= n; i++) {
+            console.log(i);
+        }
+
+        // 4
+
+        for (let i = 1; i <= 7; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("#");
+            }
+            document.write("<br>")
+        }
+
+
+        for (i = 1; i <= 7; i++) {
+            console.log("#".repeat(i));
+        }
+
+        // 5
+
+        for (let i = 0; i <= 10; i++) {
+            console.log(`${i} x ${i} = ${i * i}`);
+        }
+
+        // 6
+
+        for (let i = 0; i <= 10; i++) {
+            console.log(`${i}\t${i ** 2}\t${i ** 3}`);
+        }
+
+        // 7
+
+        for (let index = 0; index <= 100; index++) {
+            if (index % 2 == 0) {
+                console.log(index);
+            }
+
+        }
+
+        // 8
+
+        for (let index = 0; index <= 100; index++) {
+            if (index % 2 != 0) {
+                console.log(index);
+            }
+
+        }
+
+        // 9
+
+        for (let i = 1; i <= 100; i++) {
+            flag = 0;
+            for (let j = 2; j <= i / 2; j++) {
+                if (i % j == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                console.log(i)
+            }
+        }
+
+        // 10
+
+        let sum = 0;
+        for (let i = 0; i <= 100; i++) {
+            sum = sum + i;
+        }
+        console.log(`The sum of all numbers from 0 to 100 is ${sum}`);
+
+        // 11
+
+        let sumEven = 0;
+        let sumOdd = 0;
+        for (let i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                sumEven = sumEven + i;
+            } else {
+                sumOdd = sumOdd + i;
+            }
+        }
+        console.log(`The sum of all even numbers from 0 to 100 is ${sumEven}. The sum of all odd numbers from 0 to 100 is ${sumOdd}.`);
+
+        // 12
+
+        let arr = [];
+        arr.push(sumEven);
+        arr.push(sumOdd);
+        console.log(arr);
+
+        // 13
+
+        arr = [];
+        for (let i = 0; i < 5; i++) {
+            arr.push((Math.floor(Math.random() * 50)));
+        }
+
+        console.log(arr);
+
+        // 14
+
+        arr = [];
+        let random;
+        for (let i = 0; i < 5; i++) {
+
+            random = (Math.floor(Math.random() * 50));
+
+            if (arr.indexOf(random) == -1) {
+                arr.push(random)
+            }
+
+        }
+        console.log(arr);
+
+        // 15
+
+        let alphabets = 'abcdefghijklmnopqrstuvwxyz';
+        arr = [];
+        for (let i = 1; i <= 6; i++) {
+            if (i % 2 == 0) {
+                arr.push(i);
+            }
+            else {
+                arr.push(alphabets[parseInt(Math.random() * 25)])
+            }
+        }
+        console.log(arr.join(''));
+
+
+
+        // LEVEL 2 - Day 06
+
+        // 1
+
+        let alphanums = '0123456789abcdefghijklmnopqrstuvwxyz';
+        arr = [];
+        let limit = Math.floor(Math.random() * 20);
+        if (limit < 7) {
+            limit = 14;
+        }
+
+        for (let i = 1; i <= limit; i++) {
+            arr.push(alphanums[parseInt(Math.random() * 35)]);
+        }
+
+        console.log(arr.join(''));
+
+        // 2
+
+        let hexcodes = '0123456789abcdef';
+        arr = [];
+        limit = 6;
+        for (let i = 1; i <= 6; i++) {
+            arr.push(hexcodes[parseInt(Math.random() * 16)]);
+        }
+
+        console.log('#' + arr.join(''));
+
+        // 3
+
+
+        arr = [];
+
+        for (let i = 0; i <= 2; i++) {
+            arr.push(Math.floor(Math.random() * 255));
+        }
+
+        console.log(`rgb(${arr[0]},${arr[1]},${arr[2]})`);
+
+        // 4
+
+        arr = [];
+
+        for (let i = 0; i < countries.length; i++) {
+            arr.push(countries[i].toUpperCase())
+        }
+
+        console.log(arr);
+
+        // 5
+
+        arr = [];
+
+        for (let i = 0; i < countries.length; i++) {
+            arr.push(countries[i].length)
+        }
+
+        console.log(arr);
+
+        // 6
+
+        arr = [];
+
+        for (let i = 0; i < countries.length; i++) {
+            arr.push([countries[i], countries[i].toUpperCase().slice(0, 3), countries[i].length])
+
+        }
+
+        for (const n of arr) {
+            console.log(n);
+        }
+
+        // 7
+
+        arr = [];
+        arr2 = [];
+
+        for (const i of countries) {
+            if (i.includes('land')) {
+                arr.push(i);
+
+
+            } else {
+                arr2.push(i);
+            }
+        }
+
+        console.log(arr);
+
+        // 8
+
+        arr = [];
+        withoutIa = [];
+
+        for (const i of countries) {
+            if (i.endsWith('ia')) {
+                arr.push(i);
+            } else {
+                withoutIa.push(i);
+            }
+
+
+        }
+
+        console.log(arr);
+        console.log(`These are the countries ends without 'ia': ${withoutIa}`);
+
+
+        // 9
+
+        let max = 0;
+        let maxLengthCountry;
+        for (const n of countries) {
+            if (n.length > max) {
+                max = n.length;
+                maxLengthCountry = n;
+            }
+        }
+
+        console.log(maxLengthCountry);
+
+
+        // 10
+
+        let chars = [];
+
+        for (const n of countries) {
+            if (n.length == 5) {
+                chars.push(n);
+            }
+        }
+
+        console.log(chars);
+
+        // 11
+
+        let longest = 0;
+        let longestWord;
+
+        for (const n of webTechs) {
+            if (n.length > longest) {
+                longest = n.length;
+                longestWord = n;
+            }
+        }
+
+        console.log(longestWord);
+
+        // 12
+
+        arr = [];
+
+        for (const n of webTechs) {
+            arr.push([n, n.length]);
+        }
+
+
+        console.log(arr);
+
+        // 13
+
+        arr = [];
+        for (const n of mernStack) {
+            arr.push(n.slice(0, 1))
+        }
+
+        console.log(arr.join(''));
+
+        // 14
+
+        arr = ['HTML', 'CSS', 'JS', 'React', 'Redux', 'Node', 'Express', 'MongoDB'];
+
+        for (const n of arr) {
+            console.log(n);
+        }
+
+        // 15
+
+        arr = ['banana', 'orange', 'mango', 'lemon'];
+        arr2 = [];
+
+        for (let i = arr.length - 1; i >= 0; i--) {
+            arr2.push(arr[i]);
+        }
+
+        console.log(arr2);
+
+        // 16
+
+        const fullStack = [
+            ['HTML', 'CSS', 'JS', 'React'],
+            ['Node', 'Express', 'MongoDB']
+        ];
+
+        arr = [];
+        arr2 = [];
+
+        for(let i = 0; i<fullStack.length; i++){
+            if(i==0){
+                arr = fullStack[i];
+            }
+            else {
+                arr2 = fullStack[i];
+            }
+        }
+
+        let tech =(arr.join('\n')+'\n'+arr2.join('\n'));
+        console.log(tech.toUpperCase());
+
+        // LEVEL 03 - Day 6
+        
+        // 1
+        
+        let countriesCopy = [];
+        for(const copy of countries){
+            countriesCopy.push(copy);
+        }
+
+        console.log(countriesCopy);
+
+        // 2
+
+        let sortedCountries = countriesCopy.sort();
+        console.log(sortedCountries);
+
+        // 3
+
+        let sortedWebTechs = webTechs.sort();
+        console.log(sortedWebTechs);
+
+        // 4
+
+        arr = [];
+
+        for(const n of countries){
+            if (n.includes('land')) {
+                arr.push(n);
+            }
+        }
+
+        console.log(arr);
+
+        // 5
+
+        let len = 0;
+        let longestChar;
+        for(const n of countries){
+            if(n.length > len){
+                len = n.length;
+                longestChar = n;
+            }
+
+        }
+
+        console.log(longestChar);
+
+        // 6
+
+        // same as 4
+
+        // 7
+
+        arr = [];
+
+        for(const n of countries){
+            if(n.length == 4){
+                arr.push(n);
+            }
+
+        }
+
+        console.log(arr);
+
+        // 8
+
+        arr = [];
+
+        for(const n of countries){
+            if(n.split(' ').length >= 2){
+                arr.push(n);
+            }
+        }
+
+        console.log(arr);
+
+        
+
+        // 9
+
+        arr = [];
+       
+        for(let i = countries.length - 1; i >= 0; i-- ){
+            arr.push(countries[i].toUpperCase());
+        }
+        console.log(arr);
+
+
+        arr2 = [];
+        let reversedCountries = countries.reverse();
+
+        for(const n of reversedCountries){
+            arr2.push(n.toUpperCase());
+        }
+
+        console.log(arr2);
+
+    </script>
+</body>
+
+</html>

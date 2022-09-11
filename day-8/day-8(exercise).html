@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 08 Challenge</title>
+</head>
+
+<body>
+    <script>
+        // LEVEL 1 - Day 08
+
+        // 1
+
+        let dog = {};
+
+        // 2
+        console.log(dog);
+
+        // 3
+
+        dog.name = 'Pet';
+        dog.legs = 4;
+        dog.color = 'black';
+        dog.age = 5;
+        dog.bark = function () {
+            return `woof woof`
+        }
+
+        console.log(dog);
+        console.log(dog.bark());
+
+        // 4
+
+        console.log(dog.name);
+        console.log(dog.legs);
+        console.log(dog.color);
+        console.log(dog.age);
+        console.log(dog.bark());
+
+        // 5
+
+        dog.breed = 'german';
+        dog.getDogInfo = function () {
+            return `Name: ${dog.name}\nAge: ${dog.age}\nBreed: ${dog.breed}`;
+        }
+
+        console.log(dog.getDogInfo());
+
+
+        // LEVEL 2 - Day 08
+
+        // 1
+
+        const users = {
+            Alex: {
+                email: 'alex@alex.com',
+                skills: ['HTML', 'CSS', 'JavaScript'],
+                age: 20,
+                isLoggedIn: false,
+                points: 30
+            },
+            Asab: {
+                email: 'asab@asab.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+                age: 25,
+                isLoggedIn: false,
+                points: 50
+            },
+            Brook: {
+                email: 'daniel@daniel.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+                age: 30,
+                isLoggedIn: true,
+                points: 50
+            },
+            Daniel: {
+                email: 'daniel@alex.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+                age: 20,
+                isLoggedIn: false,
+                points: 40
+            },
+            John: {
+                email: 'john@john.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+                age: 20,
+                isLoggedIn: true,
+                points: 50
+            },
+            Thomas: {
+                email: 'thomas@thomas.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+                age: 20,
+                isLoggedIn: false,
+                points: 40
+            },
+            Paul: {
+                email: 'paul@paul.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+                age: 20,
+                isLoggedIn: false,
+                points: 40
+            }
+        };
+
+        let max = 0;
+        let skilledPerson;
+
+        for (const n of Object.keys(users)) {
+            if (users[n].skills.length > max) {
+                max = users[n].skills.length;
+                skilledPerson = n;
+            }
+        }
+
+        console.log(skilledPerson);
+
+        // 2
+
+        let loggedIn = 0;
+        let UserPoint = 0;
+
+        for (const n of Object.keys(users)) {
+            if (users[n].isLoggedIn == true) {
+                loggedIn++;
+
+            }
+            if (users[n].points >= 50)
+                UserPoint++;
+        }
+
+        console.log(loggedIn);
+        console.log(UserPoint);
+
+        // 3
+
+
+        for (const n of Object.keys(users)) {
+            if (users[n].skills.includes('MongoDB') && users[n].skills.includes('Express') && users[n].skills.includes('React') && users[n].skills.includes('Node')) {
+                console.log(n)
+            }
+        }
+
+        // 4
+
+        const usersCopy = Object.assign({}, users);
+        usersCopy['Smith'] = {};
+        console.log(usersCopy);
+
+        // 5
+
+        console.log(Object.keys(users));
+
+        // 6
+
+        console.log(Object.values(users));
+
+        // 7
+
+        const countries = [
+            {
+                name: 'Afghanistan',
+                capital: 'Kabul',
+                languages: ['Pashto', 'Uzbek', 'Turkmen'],
+                population: 27657145,
+                flag: 'https://restcountries.eu/data/afg.svg',
+                currency: 'Afghan afghani'
+            },
+            {
+                name: 'Åland Islands',
+                capital: 'Mariehamn',
+                languages: ['Swedish'],
+                population: 28875,
+                flag: 'https://restcountries.eu/data/ala.svg',
+                currency: 'Euro'
+            },
+            {
+                name: 'Albania',
+                capital: 'Tirana',
+                languages: ['Albanian'],
+                population: 2886026,
+                flag: 'https://restcountries.eu/data/alb.svg',
+                currency: 'Albanian lek'
+            }
+
+        ];
+
+
+        console.log('Name: ' + countries[0].name);
+        console.log('Name: ' + countries[0].capital);
+        console.log('Name: ' + countries[0].population);
+        console.log('Name: ' + countries[0].languages);
+
+
+
+        // LEVEL 3 - Day 08
+
+        const personAccount = {
+            firstName: 'John',
+            lastName: 'Doe',
+            income: 10000,
+            expenses: 2000,
+            balance: 0,
+            totalIncome: function () {
+                return this.income;
+            },
+            totalExpense: function () {
+                return this.expenses;
+            },
+            accountInfo: function () {
+                name: this.firstName + ' ' + this.lastName;
+            },
+            addIncome: function (input) {
+                return this.income += input;
+            },
+            AddExpense: function (input) {
+                return this.expenses += input;
+            },
+            accountBalance: function () {
+                return this.balance = this.totalIncome() - this.totalExpense();
+            },
+        }
+
+        console.log(personAccount.accountBalance());
+        console.log(personAccount.balance);
+        console.log(personAccount);
+
+        // 2
+
+        const users2 = [
+            {
+                _id: 'ab12ex',
+                username: 'Alex',
+                email: 'alex@alex.com',
+                password: '123123',
+                createdAt: '08/01/2020 9:00 AM',
+                isLoggedIn: false
+            },
+            {
+                _id: 'fg12cy',
+                username: 'Asab',
+                email: 'asab@asab.com',
+                password: '123456',
+                createdAt: '08/01/2020 9:30 AM',
+                isLoggedIn: true
+            },
+            {
+                _id: 'zwf8md',
+                username: 'Brook',
+                email: 'brook@brook.com',
+                password: '123111',
+                createdAt: '08/01/2020 9:45 AM',
+                isLoggedIn: true
+            },
+            {
+                _id: 'eefamr',
+                username: 'Martha',
+                email: 'martha@martha.com',
+                password: '123222',
+                createdAt: '08/01/2020 9:50 AM',
+                isLoggedIn: false
+            },
+            {
+                _id: 'ghderc',
+                username: 'Thomas',
+                email: 'thomas@thomas.com',
+                password: '123333',
+                createdAt: '08/01/2020 10:00 AM',
+                isLoggedIn: false
+            }
+        ];
+
+        // a.
+
+        const signUp = (uname, mail, pass) => {
+
+            for (const n of users2) {
+                if (n.email == mail)
+                    return `User Already Exist!`;
+            }
+
+            // generating Id        
+
+            let alphanums = '0123456789abcdefghijklmnopqrstuvwxyz0123456789';
+            let userIdChars = [];
+
+            for (let i = 0; i < 6; i++) {
+                let random = Math.floor(Math.random() * alphanums.length);
+                userIdChars.push(alphanums[random]);
+            }
+
+            let id = userIdChars.join('');
+
+            // generating Date and Time
+
+            let today = new Date;
+            let date = today.getDate();
+            let month = today.getMonth();
+            let year = today.getFullYear();
+            let hours = today.getHours();
+            let minutes = today.getMinutes();
+
+            if (date < 10) {
+                date = '0' + date;
+            }
+            if (month < 10) {
+                month = '0' + month;
+            }
+            if (minutes < 10) {
+                minutes = '0' + minutes;
+            }
+
+            let dateTime = `${date}/${month}/${year} ${hours}:${minutes} ${(hours >= 12) ? 'PM' : 'AM'}`
+
+            let addUser = {
+                _id: id,
+                username: uname,
+                email: mail,
+                password: pass,
+                createdAt: dateTime,
+                isLoggedIn: false
+            }
+            users2.push(addUser);
+            return users2;
+
+        }
+
+        console.log(signUp('asab2', 'asab@asab.com', 'Hello12'));
+
+        // b.
+
+        const signIn = (mail, pass) => {
+            for (const n of users2) {
+                if (n.email == mail && n.password == pass) {
+                    n.isLoggedIn = true;
+                    return 'SignIn Successfull';
+                }
+            }
+            return 'Enter Correct Credentials';
+        }
+
+        console.log(signIn("thomas@thomas.com", '123333'));
+
+        // 3
+
+        const products = [
+            {
+                _id: 'eedfcf',
+                name: 'mobile phone',
+                description: 'Huawei Honor',
+                price: 200,
+                ratings: [
+                    { userId: 'fg12cy', rate: 5 },
+                    { userId: 'zwf8md', rate: 4.5 }
+                ],
+                likes: []
+            },
+            {
+                _id: 'aegfal',
+                name: 'Laptop',
+                description: 'MacPro: System Darwin',
+                price: 2500,
+                ratings: [],
+                likes: ['fg12cy']
+            },
+            {
+                _id: 'hedfcg',
+                name: 'TV',
+                description: 'Smart TV:Procaster',
+                price: 400,
+                ratings: [{ userId: 'fg12cy', rate: 5 }],
+                likes: ['fg12cy']
+            }
+        ];
+
+        // a.
+        let rateProduct = (userid, rating) => {
+            let rateProductB = { 'userId': userid, 'rate': rating };
+            products[1].ratings.push(rateProductB);
+            console.log(products);
+        }
+
+        rateProduct('fkls23', 4);
+
+        // b.
+        let averageRating = (product, id) => {
+            let avg = 0;
+            let sum = 0;
+
+            for (const pdt of products) {
+                if (pdt._id == id && pdt == products[product]) {
+                    for (const n of pdt.ratings) {
+                        sum += n.rate;
+                        avg = sum / pdt.ratings.length;
+                    }
+                    return avg;
+                }
+            }
+            return 'Enter Correct Credentials';
+        }
+
+        console.log(averageRating(0, 'eedfcf'));
+
+        // 4
+
+        let likeProduct = (id, product) => {
+            if (products[product-1].likes.indexOf(id) == -1) {
+                products[product-1].likes.push(id);
+            } else {
+                products[product-1].likes.pop(id);
+            }
+            console.log(products);
+        }
+        likeProduct('John', 0);    // Like the product
+        likeProduct('John', 0);    // If already Liked, Unlike the product
+
+    </script>
+</body>
+
+</html>

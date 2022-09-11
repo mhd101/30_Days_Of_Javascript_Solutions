@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-2 Exercise</title>
+</head>
+<body>
+    <script>
+        // LEVEL 1 - Day 2
+
+        // 1
+
+        let challenge = '30 Days Of Javascript';
+
+        // 2
+
+        console.log(challenge);
+        
+        // 3
+        
+        console.log(challenge.length);
+        
+        // 4
+        
+        console.log(challenge.toUpperCase());
+        
+        // 5
+
+        console.log(challenge.toLowerCase());
+        
+        // 6
+        
+        console.log(challenge.substr(3,4));
+        console.log(challenge.substring(11,21));
+        
+        // 7
+        
+        console.log(challenge.split('Days of Javascript'));
+        
+        // 8 
+        
+        console.log(challenge.includes('Script'));
+        
+        // 9
+        
+        console.log(challenge.split(' '));
+        
+        // 10
+        
+        console.log("Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon".split(','));
+
+        // 12
+
+        console.log("30 days of Javascript".replace("Javascript", "Python"));
+
+        // 13
+
+        console.log(challenge.charAt(15));
+        
+        // 14
+        
+        console.log(challenge.charCodeAt(11));
+
+        // 15
+
+        console.log(challenge.indexOf('a'));
+        
+        // 16
+        
+        console.log(challenge.lastIndexOf('a'));
+
+        // 17
+
+        console.log("You cannot end a sentence with because because because is a conjuction".indexOf('because'));
+        
+        // 18
+        
+        console.log("You cannot end a sentence with because because because is a conjuction".lastIndexOf('because'));
+        
+        // 19
+        
+        console.log("You cannot end a sentence with because because because is a conjuction".search('because'));
+
+        // 20
+
+        console.log(" 30 days of javascript ".trim(''));
+        
+        // 21
+
+        console.log(challenge.startsWith('30'));
+        
+        // 22
+
+        console.log(challenge.endsWith('Javascript'));
+
+        // 23
+
+        console.log(challenge.match(/a/gi));
+
+        // 24
+
+        console.log("30 Days Of".concat(' Javascript'));
+
+        // 25
+
+        console.log(challenge.repeat(2));
+
+        
+        
+        // LEVEL 2 - Day 2
+
+        // 1
+
+        console.log(`The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by Jogn Holmes teaches us to help one another.`);
+
+        // 2
+
+        console.log(`"Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."`);
+
+        // 3
+
+        let str = '10';
+
+        console.log(typeof str);
+        
+        console.log(str == 10);
+        console.log(10 == +(str));
+
+        // 4
+
+        str = '9.8';
+        console.log(str == 10);
+        console.log(Math.round(str) == 10);
+
+        // 5
+
+        str = 'Python and Jargon';
+
+        console.log(str.includes('on'));
+
+        // 6
+
+        str = 'I hope this course is not full of jargon';
+
+        console.log(str.includes('jargon'));
+
+        // 7
+
+        let num = 100 - 1 + 1;
+        let num2 = Math.random() * num;
+        let randNum = Math.floor(num2) + 1;
+        console.log(randNum);
+        
+        // 8
+        
+        num = 100 - 50 + 1;
+        num2 = Math.random() * num;
+        randNum = Math.floor(num2) + 50;
+        console.log(randNum);
+
+        // 9
+
+        function randomNum(min, max){
+            let num = max - min + 1;
+            let num2 = Math.random() * num;
+            let randNum = Math.floor(num2) + min;
+            return randNum;
+
+        }
+
+        console.log(randomNum(0,255));
+
+        // 10
+
+        // first store the string in the variable
+        let string = 'Javascript';
+        // get the random variable with the string length range
+        let result = Math.floor(Math.random()*(string.length-1));
+        // print the result using array
+        console.log(string[result]);
+
+        // 11
+
+        console.log("1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125");
+
+        // 12
+
+        // console.log("you cannot end a sentence with because because because is a conjunction".substr(31,23));
+
+        let sentence = "You cannot end a sentence with because because because is a conjunction";
+        let becauseAll = sentence.substr(sentence.indexOf("because"),("because".length * 3 + 2));
+        console.log(becauseAll);
+
+
+
+        // LEVEL 3 - Day 2
+
+        // 1
+
+        sentence = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
+
+        console.log(sentence.match(/love/g).length);
+
+        // 2
+
+        sentence = 'You cannot end a sentence with because because because is a conjunction';
+        
+        console.log(sentence.match(/because/g).length);
+
+        // 3
+
+        sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching.';
+
+        console.log(sentence.replace(/[$%#@&;!?]/gi, ''));
+
+
+        // 4
+
+        sentence = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
+
+        // solution 
+        // result = parseInt(sentence.match('5000') )+ parseInt(sentence.match('10000'))+ parseInt(sentence.match('15000'));
+
+
+        // another solution (Preferred Way)
+        let income = sentence.match(/\d+/g);
+        
+        sal1 = parseInt(income[0]);
+        sal2 = parseInt(income[1]);
+        sal3 = parseInt(income[2]);
+        
+        result = sal1 + sal2 + sal3;
+
+        console.log(result);
+
+        
+
+    </script>
+</body>
+</html>

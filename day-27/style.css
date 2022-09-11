@@ -1,0 +1,196 @@
+* {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 4em;
+    letter-spacing: 5px;
+}
+
+.about-animation {
+    background-color: rgb(226, 205, 178);
+    height: 10vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.about {
+    margin-left: 20px;
+    margin-right: 40px;
+    font-size: 24px;
+}
+
+
+
+.about-me {
+    margin-top: 20px;
+}
+
+.rect {
+    height: 150px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid gray;
+    
+}
+
+.rect:hover {
+    background-color:  rgb(226, 205, 178);
+    animation-delay: 1000ms;
+    animation: ease-in-out;
+}
+
+.courses {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.technologies:before {
+    content: '';
+    font-size: 100%;
+    animation-name: head;
+    animation-duration: 22s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes head {
+    0% {
+        opacity: 0;
+        content: ''
+    }
+
+    10% {
+        opacity: 1;
+        content: 'HTML'
+    }
+
+    20% {
+        opacity: 0;
+        content: ''
+    }
+
+    30% {
+        opacity: 1;
+        content: 'CSS'
+    }
+
+    40% {
+        opacity: 0;
+        content: ''
+    }
+
+    50% {
+        opacity: 1;
+        content: 'JAVASCRIPT'
+    }
+
+    60% {
+        opacity: 0;
+        content: ''
+    }
+
+    70% {
+        opacity: 1;
+        content: 'SAAS'
+    }
+
+    80% {
+        opacity: 0;
+        content: ''
+    }
+
+    90% {
+        opacity: 1;
+        content: 'TAILWIND'
+    }
+
+    100% {
+        opacity: 0;
+        content: ''
+    }
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.about::before {
+    content: '';
+    font-size: 100%;
+    animation-name: slide;
+    animation-duration: 22s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        
+        content: ''
+    }
+
+    10% {
+        opacity: 1;
+        content: '👨‍🎓 Student'
+    }
+
+    20% {
+        opacity: 0;
+        
+        content: ''
+    }
+
+    30% {
+        opacity: 1;
+        content: '🧑‍💻 Developer'
+    }
+
+    40% {
+        opacity: 0;
+        content: ''
+    }
+
+    50% {
+        opacity: 1;
+        content: '🎥 Video Editor'
+    }
+
+    60% {
+        opacity: 0;
+        content: ''
+    }
+
+    70% {
+        opacity: 1;
+        content: '🧑‍💻 Youtuber'
+    }
+
+    80% {
+        opacity: 0;
+        content: ''
+    }
+
+    90% {
+        opacity: 1;
+        content: '🔥 Motivational Speaker'
+    }
+
+    100% {
+        opacity: 0;
+        content: ''
+    }
+}

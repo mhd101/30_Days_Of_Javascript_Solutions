@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 19 Challenge</title>
+</head>
+
+<body>
+    <script>
+
+        // LEVEL 01 - Day 19
+
+        // 1
+
+        const outer = () => {
+            let a = 1;
+            const inner = () => {
+                console.log(a)
+            }
+            inner();
+        }
+
+        outer();
+
+        // LEVEL 02 - Day 19
+
+        // 1
+
+        const outerFunc = () => {
+            let a = 1;
+            const inner1 = () => {
+                let b = 2;
+                const inner2 = () => {
+                    let c = 3;
+                    const inner3 = () => {
+                        console.log(a, b, c);
+                    }
+                    inner3();
+                }
+                inner2();
+            }
+            inner1();
+        }
+
+        outerFunc();
+
+        // LEVEL 03 - Day 19
+
+        const personAccount = () => {
+            let firstName = 'John';
+            let lastName = 'Doe';
+            let incomes = [1000, 500, 2500];
+            let expenses = [200, 300, 700];
+
+            let totalIncome = () => {
+                let incomesSum = incomes.reduce((acc, cur) => acc + cur, 0);
+                return incomesSum;
+            }
+            let totalExpense = () => {
+                let expensesSum = expenses.reduce((acc, cur) => acc + cur, 0);
+                return expensesSum;
+            }
+            let accountInfo = () => {
+                let fullName = firstName + ' ' + lastName;
+                let accountBalance = totalIncome();
+
+                return `Name: ${fullName}\nBalance: ${accountBalance}`;
+            }
+            let addIncome = (...add) => {
+                incomes.push(...add);
+                return totalIncome();
+            }
+            let addExpense = (...add) => {
+                expenses.push(...add);
+                return totalExpense();
+            }
+
+            return {
+                accountInfo: accountInfo(),
+                totalIncome: totalIncome(),
+                totalExpense: totalExpense(),
+                addIncome: addIncome,
+                addExpense: addExpense,
+
+            }
+
+
+        }
+
+        const person = personAccount()
+
+        console.log(person.accountInfo);
+        console.log(person.totalIncome);
+        console.log(person.totalExpense);
+        console.log(person.addIncome(300, 400));
+        console.log(person.addExpense(200, 150));
+
+        console.log(person.totalIncome);
+        console.log(person.totalExpense);
+
+    </script>
+</body>
+
+</html>

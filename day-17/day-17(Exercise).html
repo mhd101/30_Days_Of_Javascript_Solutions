@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17 Challenge</title>
+</head>
+<body>
+    <script>
+
+        // LEVEL 01 - Day 17
+
+        // 1
+
+        localStorage.setItem('firstName', 'John');
+        localStorage.setItem('lastName', 'Doe');
+        localStorage.setItem('Age', 20);
+        localStorage.setItem('Country', 'Finland');
+        localStorage.setItem('City', 'Helinski');
+
+        console.log(localStorage);
+
+        // LEVEL 02 - Day 17
+
+        // 1
+
+        const student = {
+            firstName: 'John',
+            lastName: 'Doe',
+            Age: 20,
+            skills: [
+                "HTML", "CSS", "JS"
+            ],
+            country: 'Finland'
+        }
+
+        let studenttxt = JSON.stringify(student,undefined,4);
+        localStorage.setItem('Student', studenttxt);
+        console.log(localStorage);
+      
+    </script>
+</body>
+</html>

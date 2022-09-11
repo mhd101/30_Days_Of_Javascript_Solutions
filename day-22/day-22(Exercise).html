@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 22 Challenge</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    </div>
+    <script>
+
+        // LEVEL 01 - Day 22
+
+        // let div = document.createElement('div')
+        // document.body.append(div)
+        // div.style.width = '50%'
+        // div.style.margin = '0 auto'
+
+        // // prime no function
+
+        // let isPrime = n => {
+        //     if (n == 1 || n == 0) return false;
+        //     if (n == 2 || n == 3) return true;
+
+        //     for (let i = 2; i <= Math.sqrt(n); i++) {
+        //         if (n % i == 0) return false;
+
+        //     }
+        //     return true;
+        // }
+
+        // for (let i = 0; i <= 100; i++) {
+        //     let p = document.createElement('p')
+        //     p.style.color = 'white'
+
+        //     if (i % 2 == 0) {
+        //         p.textContent = i
+        //         p.style.backgroundColor = '#42b845'
+        //         p.style.display = 'inline-block'
+        //         p.style.padding = '10px'
+        //         p.style.fontSize = '18px'
+        //         p.style.margin = '2px'
+        //         p.style.width = '20px'
+        //         p.style.textAlign = 'center'
+        //     } else if (isPrime(i)) {
+        //         p.textContent = i;
+        //         p.style.backgroundColor = '#f76262'
+        //         p.style.display = 'inline-block'
+        //         p.style.padding = '10px'
+        //         p.style.fontSize = '18px'
+        //         p.style.margin = '2px'
+        //         p.style.width = '20px'
+        //         p.style.textAlign = 'center'
+        //     } else {
+        //         p.textContent = i;
+        //         p.style.backgroundColor = '#fee904'
+        //         p.style.display = 'inline-block'
+        //         p.style.padding = '10px'
+        //         p.style.fontSize = '18px'
+        //         p.style.margin = '2px'
+        //         p.style.width = '20px'
+        //         p.style.textAlign = 'center'
+        //     }
+
+        //     div.append(p)
+
+        // }
+
+        // LEVEl 02 - Day 22
+
+        // document.body.style.fontFamily = 'Baloo'
+
+        // // Fetching Countries
+
+        // let url = 'https://restcountries.com/v2/all'
+
+        // const fetchCountries = async () => {
+        //     try {
+        //         const response = await fetch(url);
+        //         const countries = await response.json()
+
+        //         const allCountries = countries.map(country => country.name)
+
+        //         let header = document.createElement('h1')
+        //         let subHeader = document.createElement('h2')
+
+        //         header.textContent = 'WORLD COUNTRIES LIST'
+        //         header.style.textAlign = 'center'
+        //         header.style.fontSize = '28px'
+
+        //         document.body.append(header)
+        //         document.body.append(subHeader)
+
+        //         subHeader.textContent = 'Total Number of Countries: ' + allCountries.length
+        //         subHeader.style.textAlign = 'center'
+        //         subHeader.style.fontSize = '16px'
+
+        //         let container = document.createElement('div')
+        //         container.style.display = 'grid'
+        //         container.style.gridTemplateColumns = 'auto auto auto auto auto'
+
+        //         container.style.gridGap = ' 5px'
+        //         container.style.alignContent = 'center'
+        //         container.style.rowGap = '1px'
+
+        //         for (const country of allCountries) {
+        //             let p = document.createElement('p')
+        //             p.textContent = country
+        //             p.style.boxShadow = '1px 1px 5px gray'
+        //             p.style.textAlign = 'center'
+        //             p.style.paddingTop = '40px'
+        //             p.style.paddingBottom = '40px'
+        //             p.style.paddingLeft = '5px'
+        //             p.style.paddingRight = '5px'
+        //             p.style.cursor = 'pointer'
+        //             container.append(p)
+        //         }
+
+        //         document.body.append(container)
+
+        //     } catch (error) {
+        //         console.log(error)
+        //     }
+        // }
+
+        // fetchCountries();
+
+
+        // LEVEL 03 - Day 22
+
+
+        const asabenehChallenge = {
+            skills: [
+                'Web Development',
+                'Data Analysis',
+                'Data Visualization',
+                'Programming',
+                'Databases',
+                'Developing API'
+            ],
+            challenges: [
+                {
+                    name: '30 Days Of Python',
+                    topics: [
+                        'Python',
+                        'Flask',
+                        'Numpy',
+                        'Pandas',
+                        'Statistics',
+                        'API',
+                        'MongoDB'
+                    ],
+                    days: 30,
+                    status: 'Done',
+                    questions: 'Above 500',
+                    projects: 'Two',
+                    interviewQns: '',
+                    githubUrl: 'https://github.com/Asabeneh/30-Days-Of-Python'
+                },
+                {
+                    name: '30 Days Of JavaScript',
+                    topics: ['JavaScript', 'ES6', 'Promise', 'async and await', 'DOM'],
+                    days: 30,
+                    status: 'Ongoing',
+                    questions: 'Above 500',
+                    projects: 'About 30',
+                    interviewQns: '',
+                    githubUrl: 'https://github.com/Asabeneh/30DaysOfJavaScript'
+                },
+                {
+                    name: '30 Days Of HTML & CSS',
+                    topics: ['CSS', 'Flex', 'Grid', 'CSS Animation'],
+                    days: 30,
+                    status: 'Coming',
+                    questions: 'Above 500',
+                    projects: 'Two',
+                    interviewQns: '',
+                    githubUrl: ''
+                },
+                {
+                    name: '30 Days Of React',
+                    topics: [
+                        'React',
+                        'React Router',
+                        'Redux',
+                        'Context API',
+                        'React Hooks',
+                        'MERN'
+                    ],
+                    days: 30,
+                    status: 'Coming',
+                    questions: '',
+                    projects: '',
+                    interviewQns: '',
+                    githubUrl: ''
+                },
+                {
+                    name: '30 Days Of ReactNative',
+                    topics: ['ReactNative', 'Redux'],
+                    days: 30,
+                    status: 'Coming',
+                    questions: '',
+                    projects: 'Two',
+                    interviewQns: '',
+                    githubUrl: ''
+                },
+                {
+                    name: '30 Days Of Fullstack',
+                    topics: ['React', 'Redux', 'MongoDB', 'Node', 'MERN'],
+                    days: 30,
+                    status: 'Coming',
+                    questions: '',
+                    projects: '',
+                    interviewQns: '',
+                    githubUrl: ''
+                },
+                {
+                    name: '30 Days Of Data Analysis',
+                    topics: ['Python', 'Numpy', 'Pandas', 'Statistics', 'Visualization'],
+                    days: 30,
+                    status: 'Coming',
+                    questions: '',
+                    projects: '',
+                    interviewQns: '',
+                    githubUrl: ''
+                },
+                {
+                    name: '30 Days Of Machine Learning',
+                    topics: [
+                        'Python',
+                        'Numpy',
+                        'Pandas',
+                        'Scikit-learn',
+                        'Scipy',
+                        'Linear Algebra',
+                        'Statistics',
+                        'Visualization'
+                    ],
+                    days: 30,
+                    status: 'Coming',
+                    questions: '',
+                    projects: '',
+                    interviewQns: '',
+                    githubUrl: ''
+                }
+
+
+            ],
+
+        }
+
+        let mainContainer = document.createElement('div')
+        document.body.append(mainContainer)
+        document.body.style.fontFamily = 'baloo'
+
+
+
+        asabenehChallenge.challenges.forEach(x => {
+
+            let subContainer = document.createElement('div')
+            mainContainer.append(subContainer)
+            subContainer.style.display = 'flex'
+            subContainer.style.justifyContent = 'space-around'
+            subContainer.style.alignItems = 'center'
+            subContainer.style.marginBottom = '5px'
+
+            let titleDiv = document.createElement('div')
+            subContainer.append(titleDiv)
+            titleDiv.style.textAlign = 'left'
+            
+            
+
+
+            let title = document.createElement('p')
+            titleDiv.append(title)
+            title.textContent = x.name
+            title.style.padding = '10px'
+            title.style.width = '200px'
+            title.style.textAlign = 'left'
+
+            let detailDiv = document.createElement('div')
+            subContainer.append(detailDiv)
+
+            let detail = document.createElement('details')
+            detailDiv.append(detail)
+            detail.style.padding = '10px'
+            detail.style.width = '200px'
+            detail.style.textAlign = 'left'
+
+            let summary = document.createElement('summary')
+            detail.append(summary)
+            summary.textContent = x.name.replace('30 Days Of', '')
+            summary.style.fontWeight = 'bold'
+            summary.style.textAlign = 'left'
+
+            x.topics.map(topic => {
+                let list = document.createElement('li')
+                detail.append(list)
+                list.textContent = topic
+                list.style.listStyleType = 'none'
+
+            })
+
+            let statusDiv = document.createElement('div')
+            subContainer.append(statusDiv)
+
+            let status = document.createElement('p')
+            statusDiv.append(status)
+            status.textContent = x.status
+            status.style.padding = '10px'
+            status.style.textAlign = 'left'
+
+
+
+
+
+            if (status.innerText == 'Done') {
+                subContainer.style.backgroundColor = '#228b22'
+            } else if (status.innerText == 'Ongoing') {
+                subContainer.style.backgroundColor = '#FFFF02'
+            } else {
+                subContainer.style.backgroundColor = '#DC143C'
+            }
+
+
+
+
+
+
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

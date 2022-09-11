@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validating Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h2>Validating Web Forms</h1>
+        </div>
+
+        <form>
+            <!-- First Name Input -->
+            <div class="firstname input-div ">
+                <label for="First Name">First Name</label>
+                <input type="text" placeholder="First Name" id="first-name">
+            </div>
+            <div class="firstname-error" style="display:none;">
+                <p>First Name must be alphanumeric and contain 3-16 characters</p>
+            </div>
+
+             <!-- Last Name Input -->
+            <div class="lastname input-div">
+                <label for="Last Name">Last Name</label>
+                <input type="text" placeholder="Last Name" id="last-name">
+            </div>
+            <div class="lastname-error" style="display:none;">
+                <p>Last Name must be alphanumeric and contain 3-16 characters</p>
+            </div>
+
+            <!-- Email Input -->
+            <div class="email input-div">
+                <label for="Email">Email</label>
+                <input type="text" placeholder="Email" id="email-id">
+            </div>
+            <div class="email-error" style="display:none;">
+                <p>Email must be a valid address, e.g. example@example.com</p>
+            </div>
+
+             <!-- Password Input -->
+            <div class="password input-div">
+                <label for="Password">Password</label>
+                <input type="password" placeholder="Password" id="pass-word">
+            </div>
+            <div class="password-error" style="display:none;">
+                <p>Password must be alphanum with (@,_ and -) and between 6-20 </p>
+            </div>
+
+            <!-- Telephone Input -->
+            <div class="telephone input-div">
+                <label for="Telephone">Telephone</label>
+                <input type="text" placeholder="Telephone" id="tele-phone">
+            </div>
+            <div class="telephone-error" style="display:none;">
+                <p>A valid Telephone number i.e., (333-333-3344)</p>
+            </div>
+
+            <!-- Bio Input -->
+            <div class="bio input-div">
+                <label for="Bio">Your Bio</label>
+                <input type="text" placeholder="Bio" id="your-bio">
+            </div>
+            <div class="bio-error" style="display:none;">
+                <p>Bio must contain lowercase letter and be 8-50 characters</p>
+            </div>
+
+
+            <div class="submit-button">
+                <input type="button" value="Submit" id="submit">
+            </div>
+        </form>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

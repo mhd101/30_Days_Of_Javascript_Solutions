@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 Challenge</title>
+</head>
+<body>
+    <script>
+        
+        // LEVEL 01 - Day 15
+
+        // 1
+
+        class Animal {
+            constructor(name,age,color,legs){
+                this.name = name;
+                this.age = age;
+                this.color = color;
+                this.legs = legs;
+            }
+
+            animalName(){
+                return this.name;
+            }
+
+            get animalInfo(){
+                return `Animal Name: ${this.name}\nAnimal Age: ${this.age}\nAnimal Color: ${this.color}\nAnimal Legs: ${this.legs}`;
+                
+            }
+        }
+
+        let animal = new Animal('Lion', 13, 'Orange', 4);
+        console.log(animal);
+        console.log(animal.animalName());
+        console.log(animal.animalInfo);
+
+        // 2
+
+        class Dog extends Animal {
+            constructor(name, age, color, legs,gender){
+                super(name, age, color, legs)
+                this.gender = gender;
+            }
+        }
+
+        let dog = new Dog('Pet', 10, 'Black', 4, 'Male');
+        console.log(dog);
+
+        console.log(dog.animalInfo);  // Accessing from parent
+
+        
+        // LEVEL 02 - Day 15
+
+        // 1
+
+        class Cat extends Animal {
+            constructor(name, age, color, legs,gender){
+                super(name, age, color, legs)
+                this.gender = gender;
+            }
+
+           get animalInfo(){
+                return super.animalInfo + `\nAnimal Gender: ${this.gender}`;
+            }
+        }
+
+        let cat = new Cat('Meow', 4, 'White', 4, 'Female');
+        console.log(cat.animalInfo);
+
+        
+        // LEVEL 03 - Day 15
+
+        // 1
+
+        class PersonAccount {
+            constructor(firstname, lastname,incomes,expenses){
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.incomes = incomes;
+                this.expenses = expenses;
+            }
+
+            get totatIncome(){
+                return this.incomes;
+            }
+
+            get totalExpense(){
+                return this.expenses;
+            }
+
+            get accountInfo(){
+                let fullname = this.firstname + ' ' + this.lastname;
+                let totalbalance = this.incomes;
+                return `Full Name: ${fullname}\nAccountBalance: ${totalbalance}`
+            }
+
+            set addIncome(value){
+                return this.incomes = this.incomes + value;
+            }
+
+            set addExpense(value){
+                return this.expenses = this.expenses + value;
+            }
+
+            get accountBalance(){
+                return this.incomes;
+            }
+        }
+
+        let person = new PersonAccount('John', 'Doe', 2000,500);
+        console.log(person);
+
+        console.log(person.totatIncome);
+        console.log(person.totalExpense);
+        console.log(person.accountInfo);
+
+        person.addIncome = 1000;
+        console.log(person.incomes);    // 3000
+
+        person.addExpense = 500;
+        console.log(person.totalExpense);   // 1000
+
+        console.log(person.accountBalance); // 3000
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 21 Challenge</title>
+</head>
+
+<body>
+
+    <p id="p-1">Para1</p>
+    <p id="p-2">Para2</p>
+    <p id="p-3">Para3</p>
+    <p id="p-4">Para4</p>
+
+
+
+
+
+    <script>
+
+        // LEVEL 01 - Day 21
+
+        // 1
+
+        const firstPara = document.querySelector('p')
+        console.log(firstPara)
+
+        // 2
+
+        const para1 = document.querySelector('#p-1')
+        const para2 = document.querySelector('#p-2')
+        const para3 = document.querySelector('#p-3')
+        const para4 = document.querySelector('#p-4')
+
+        console.log(para1, para2, para3, para4)
+
+        // 3
+
+        const allPara = document.querySelectorAll('p')
+        console.log(allPara)
+
+        // 4
+
+        for (const p of allPara) {
+            console.log(p.innerText)
+        }
+
+        // 5
+
+        const paraFourth = document.querySelector('#p-4')
+        paraFourth.innerHTML = '<i>Fourth Paragraph</a>'
+
+        // 6
+
+        const allPara2 = document.querySelectorAll('p')
+
+        allPara2.forEach(p => p.classList.add('para'))
+
+        allPara2[0].id = 'para-1'
+        allPara2[1].id = 'para-2'
+        allPara2[2].id = 'para-3'
+        allPara2[3].id = 'para-4'
+
+
+        // LEVEL 02 - Day 21
+
+        // 1
+
+        allPara2[0].style.color = 'red'
+        allPara2[1].style.color = 'green'
+        allPara2[2].style.color = 'blue'
+        allPara2[3].style.color = 'orange'
+
+        allPara2[0].style.border = '1px solid black'
+        allPara2[1].style.border = '1px solid black'
+        allPara2[2].style.border = '1px solid black'
+        allPara2[3].style.border = '1px solid black'
+
+        allPara2.forEach(f => f.style.fontSize = '24px')
+        allPara2.forEach(f => f.style.fontFamily = 'sans-serif')
+
+        // 2
+
+        for (let i = 0; i < allPara2.length; i++) {
+            if (i % 2 == 0) {
+                allPara2[i].style.color = 'red'
+            } else {
+                allPara2[i].style.color = 'green'
+            }
+        }
+
+        // 3
+
+        allPara2.forEach(all => {
+            all.setAttribute('class', 'paragraph')
+            allPara[0].setAttribute('id', 'p-1')
+            allPara[1].setAttribute('id', 'p-2')
+            allPara[2].setAttribute('id', 'p-3')
+            allPara[3].setAttribute('id', 'p-4')
+            allPara[0].textContent = 'First Paragraph'
+            allPara[1].textContent = 'Second Paragraph'
+            allPara[2].textContent = 'Third Paragraph'
+            allPara[3].textContent = 'Fourth Paragraph'
+        })
+
+
+    </script>
+</body>
+
+</html>

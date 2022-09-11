@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 05 Challenge</title>
+</head>
+
+<body>
+    <script>
+        // LEVEL 01 - Day 5
+
+        // 1
+
+        let arr = [];
+
+        // 2
+
+        arr = [12, 13, 14, 15, 16, 17];
+
+        // 3
+
+        console.log(arr.length);
+
+        // 4
+
+        console.log(arr[0]);
+        console.log(arr[arr.length / 2]);
+        console.log(arr[arr.length - 1]);
+
+        // 5
+
+        let mixedDataTypes = ['Hello', true, 14, 17.4, null];
+
+        console.log(mixedDataTypes.length);
+
+        // 6
+
+        let itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+
+        // 7
+
+        console.log(itCompanies);
+
+        // 8
+
+        console.log(itCompanies.length);
+
+        // 9
+
+        console.log(itCompanies[0]);
+        console.log(itCompanies[Math.floor(itCompanies.length / 2)]);
+        console.log(itCompanies[itCompanies.length - 1]);
+
+        // 10
+
+        console.log(itCompanies[0]);
+        console.log(itCompanies[1]);
+        console.log(itCompanies[2]);
+        console.log(itCompanies[3]);
+        console.log(itCompanies[4]);
+        console.log(itCompanies[5]);
+        console.log(itCompanies[6]);
+
+        // 11
+
+        console.log(itCompanies[0].toUpperCase());
+        console.log(itCompanies[1].toUpperCase());
+        console.log(itCompanies[2].toUpperCase());
+        console.log(itCompanies[3].toUpperCase());
+        console.log(itCompanies[4].toUpperCase());
+        console.log(itCompanies[5].toUpperCase());
+        console.log(itCompanies[6].toUpperCase());
+
+        // 12
+
+        console.log(itCompanies.join(', ') + ' are big IT companies');
+
+        // 13
+
+        if (itCompanies.includes('Amazon')) {
+            console.log("This company Exist");
+        } else {
+            console.log("This company doesn't Exist");
+        }
+
+        // 14
+
+        for (let i = 0; i < itCompanies.length; i++) {
+            if (itCompanies[i].includes('oo')) {
+                console.log(itCompanies[i] + ` includes more than one 'o'`);
+            } else {
+                console.log(itCompanies[i] + ` doesn't includes more than one 'o'`);
+            }
+        }
+
+        // 15
+
+        console.log(itCompanies.sort());
+
+        // 16
+
+        console.log(itCompanies.reverse());
+
+        // 17
+
+        console.log(itCompanies.slice(0, 3));
+
+        // 18
+
+        console.log(itCompanies.slice(itCompanies.length - 3, itCompanies.length));
+
+        // 19
+
+        console.log(itCompanies.slice(Math.floor(itCompanies.length / 2)));
+
+        // 20
+
+        let companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+        console.log(companies.shift());
+
+        // 21
+
+        console.log(companies.splice(companies.length / 2 - 1, 1));
+
+        // 22
+
+        console.log(companies.pop());
+
+        // 23
+
+        console.log(companies.splice());
+
+
+        // LEVEL 02 - Day 5
+
+        // 1
+
+        // Answer in script.js file
+
+        // 2
+
+        let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.';
+
+        let removePunctuations = text.replace(/[,.]/gi, '');
+        let words = removePunctuations.split(' ');
+        console.log(words);
+        console.log(words.length);
+
+        // 3
+
+        const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+
+        shoppingCart.unshift('Meat');   // Adding Meat in the beginning
+        shoppingCart.push('Sugar');     // Adding Sugar at the end
+        shoppingCart.splice(shoppingCart.lastIndexOf('Honey'), 1);  // Removing Honey
+        let index = shoppingCart.indexOf('Tea');
+        console.log(shoppingCart[index] = 'Green Tea'); // Replacing Tea with Green Tea
+
+        console.log(shoppingCart);
+
+        // 4
+
+        const countries = [
+            'Albania',
+            'Bolivia',
+            'Canada',
+            'Denmark',
+            'Ethiopia',
+            'Finland',
+            'Germany',
+            'Hungary',
+            'Ireland',
+            'Japan',
+            'Kenya'
+        ];
+
+        if (countries.includes('Ethiopia')) {
+            console.log("Ethiopia".toUpperCase());
+        } else {
+            countries.push('Ethiopia');
+            console.log(countries);
+        }
+
+        // 5
+
+        const webTechs = [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Redux',
+            'Node',
+            'MongoDB'
+        ];
+
+        if (webTechs.includes('Sass')) {
+            console.log("Sass is a CSS Preprocessor.");
+        } else {
+            webTechs.push('Sass');
+            console.log(webTechs);
+        }
+
+        // 6
+
+        const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux'];
+        const backEnd = ['Node','Express', 'MongoDB'];
+
+        const fullStack = frontEnd.concat(backEnd);
+        console.log(fullStack);
+        
+
+
+        // LEVEL 03 - Day 5
+
+        // 1
+
+        const age = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+        age.sort();
+        let min = age[0];
+        let max = age[age.length - 1];
+        console.log('Minimum Age = '+ min);
+        console.log('Maximum Age = '+ max);
+
+        let median = age[age.length / 2];
+        console.log("Median Age = "+median);
+
+        let average = age[0]+age[1]+age[2]+age[3]+age[4]+age[5]+age[6]+age[7]+age[8]+age[9]/age.length;
+        console.log("Average = "+ average);
+
+        let range = max - min;
+        console.log("Range = "+ range);
+
+        console.log(age);
+
+
+        // 2
+
+        let slice = countries.slice(0, 10);
+        console.log(slice);
+
+        let middleCountries = countries[parseInt(countries.length / 2)];
+        console.log(middleCountries);
+
+        // 3
+
+        if (countries.length % 2 == 0) {
+            let firstHalf = countries.slice(0,countries.length/2);
+            console.log("First Half Countries: "+firstHalf);
+            let secondHalf = countries.slice(countries.length/2, countries.length);
+            console.log("Second Half Countries: "+secondHalf);
+        
+        } else {
+            countries.unshift('Iceland');
+            console.log("Added Iceland: "+ countries);
+        }
+
+    </script>
+
+    <script src="web_techs.js"></script>
+    <script src="country.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

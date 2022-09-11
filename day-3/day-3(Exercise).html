@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // LEVEL 1 - Day 03
+
+        // 1
+
+        let firstName = 'John';
+        let lastName = 'Doe';
+        let country = 'America';
+        let city = 'California';
+        let age = 28;
+        let isMarried = true;
+        let year = 2022;
+
+        console.log(typeof firstName);
+        console.log(typeof lastName);
+        console.log(typeof country);
+        console.log(typeof city);
+        console.log(typeof age);
+        console.log(typeof isMarried);
+        console.log(typeof year);
+
+        // 2
+
+        let string = '10';
+
+        console.log(typeof string == 10);
+
+        // 3
+
+        string = '9.8';
+
+        console.log(parseInt(string) == 10);
+
+        // 4
+
+        // 4.1
+        console.log('10' == 10);
+        console.log('10' !== 10);
+        console.log(true !== 10);
+        // 4.2
+        console.log('10' != 10);
+        console.log('10' === 10);
+        console.log(true == 10);
+
+        // 5
+
+        console.log(4>3);
+        console.log(4>=3);
+        console.log(4<3);
+        console.log(4<=3);
+        console.log(4==4);
+        console.log(4===4);
+        console.log(4!=4);
+        console.log(4!==4);
+        console.log(4=='4');
+        console.log(4!='4');
+        console.log(4==='4');
+        console.log(!('python'.length == 'jargon'.length));
+
+        // 6
+
+        console.log(4>3 && 10<12);
+        console.log(4>3 && 10>12);
+        console.log(4>3 || 10<12);
+        console.log(4>3 || 10>12);
+        console.log(!(4>3));
+        console.log(!(4<3));
+        console.log(!(false));
+        console.log(!(4>3 && 10<12));
+        console.log(!(4>3 && 10>12));
+        console.log(!(4 === '4'));
+        console.log(!("dragon".match('on') && "python".match('on')));
+
+        // 7
+
+        const today = new Date;
+        
+        console.log(today.getFullYear());
+        console.log(today.getMonth());
+        console.log(today.getDate());
+        console.log(today.getDay());
+        console.log(today.getHours());
+        console.log(today.getMinutes());
+        console.log(today.getTime());
+
+
+        // LEVEL 2 - Day 03
+
+        // 1
+
+        //let base = parseFloat(prompt("Enter Base:"));
+        //let height = parseFloat(prompt("Enter Height:"));
+
+        //let area = 0.5 * base * height;
+
+        //console.log("The area of the triangle: "+ area);
+
+
+        // 2
+
+        // let sideA = parseFloat(prompt('Enter Side A:'));
+        // let sideB = parseFloat(prompt('Enter Side B:'));
+        // let sideC = parseFloat(prompt('Enter Side C:'));
+
+        // let perimeter = sideA + sideB + sideC;
+
+        // console.log("Perimeter of the triangle is "+ perimeter);
+
+        
+        // 3
+
+        // let width = parseFloat(prompt("Enter Width:"));
+        // let length = parseFloat(prompt("Enter Length:"));
+
+        // area = length * width;
+
+        // perimeter = 2*(length+width);
+
+        // console.log(`Area of the triangle is ${area} \nPerimeter of the triangle is ${perimeter}`);
+
+        // 4
+
+        // const PI = (Math.PI);
+
+        // radius = parseFloat(prompt("Enter Radius:"));
+
+
+        // console.log(`Area of the circle is ${(PI*Math.pow(radius, 2)).toFixed(2)}\nCircumference of the Circle is ${(2*PI*radius).toFixed(2)}`);
+
+        // 8
+
+        // let x = -3;
+        // let y = x**2 +6*x + 9;
+        // console.log(y);
+
+        // 9
+
+        // let hours = prompt("Enter Hours:");
+        // let ratePerHours = prompt("Enter Rate Per Hours:");
+
+        // let weeklyEarning = hours * ratePerHours;
+        // console.log("Your Weekly earning is "+weeklyEarning);
+
+        // 10
+
+        // let name = prompt("Enter Your Name");
+        // (name.length > 7) ? alert("Your Name is Long") : alert("You Name is Short");
+
+        // 11
+
+        // firstName = 'Asabeneh';
+        // lastName = 'Yetayeh';
+
+        // console.log((firstName.length > lastName.length) ? `Your first name, ${firstName} is longer than your family name, ${lastName}`: `Your first name, ${lastName} is longer than your family name, ${firstName}` );
+
+        // 12
+
+        // let myAge = 250;
+        // let yourAge = 25;
+
+        // console.log((myAge-yourAge > yourAge) ? `I am ${myAge-yourAge} years older than you`:``);
+
+        // 13
+
+        // let birthYear = Math.abs(parseInt(prompt("Enter your Birth Year:")));
+
+        // console.log((birthYear >= 18 ? `You are ${today.getFullYear() - birthYear}. You are old enough to drive.`:`You are ${today.getFullYear() - birthYear}. You are will be allowed to drive after 3 years.`));
+
+        // 14
+
+        // let livedYear = parseInt(prompt("Enter Number of years you lived:"));
+
+        // console.log(`You lived ${livedYear*365*24*60*60} Seconds.`);
+
+        // 15
+
+        let fullYear = today.getFullYear();
+        let fullMonth = today.getMonth()+1;
+        let fullDate = today.getDate();
+
+        let fullHours = today.getHours();
+        let fullMinutes = today.getMinutes();
+        let fullSeconds = today.getSeconds();
+
+        fullMonth = (fullMonth < 10) ? `0${fullMonth}` : fullMonth;
+        fullDate = (fullDate < 10) ? `0${fullDate}` : fullDate;
+        fullHours = (fullHours < 10) ? `0${fullHours}` : fullHours;
+        fullMinutes = (fullMinutes < 10) ? `0${fullMinutes}` : fullMinutes;
+        fullSeconds = (fullSeconds < 10) ? `0${fullSeconds}` : fullSeconds;
+
+        // 15.1
+        console.log(`${fullYear}-${fullMonth}-${fullDate} ${fullHours}:${fullMinutes}`);
+        //15.2
+        console.log(`${fullDate}-${fullMonth}-${fullYear} ${fullHours}:${fullMinutes}`);
+        //15.3
+        console.log(`${fullDate}/${fullMonth}/${fullYear} ${fullHours}:${fullMinutes}`);
+
+        // LEVEL 3 - Day 03
+
+        // 1
+
+        console.log(`${fullYear}-${fullMonth}-${fullDate} ${fullHours}:${fullMinutes}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

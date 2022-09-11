@@ -1,0 +1,59 @@
+* {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background: url(globe.jpg);
+    box-shadow: inset 0 0 0 1000px rgba(13, 28, 77, 0.5);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px;
+}
+
+.header h1 {
+    color: white;
+    letter-spacing: 5px;
+    font-size: 3rem;
+
+}
+
+.header p {
+    color: white;
+    font-weight: 600;
+
+}
+
+.header input {
+    border: 1px solid #4b7199;
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    color: #b1b0b2;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+input:focus{
+    outline: 2px solid #4b7199;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.countries  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+

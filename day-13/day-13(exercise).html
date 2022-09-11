@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 Challenge</title>
+</head>
+
+<body>
+    <script>
+
+        // LEVEL 01 - Day 13
+
+        // 1
+
+        let countries = ['Iceland', 'India', 'America', 'Finland', 'Canada'];
+
+        console.table(countries);
+
+        // 2
+
+        countries = [
+            {
+                name: 'Afghanistan',
+                capital: 'Kabul',
+                languages: ['Pashto', 'Uzbek', 'Turkmen'],
+                population: 27657145,
+                flag: 'https://restcountries.eu/data/afg.svg',
+                currency: 'Afghan afghani'
+            },
+            {
+                name: 'Åland Islands',
+                capital: 'Mariehamn',
+                languages: ['Swedish'],
+                population: 28875,
+                flag: 'https://restcountries.eu/data/ala.svg',
+                currency: 'Euro'
+            },
+            {
+                name: 'Albania',
+                capital: 'Tirana',
+                languages: ['Albanian'],
+                population: 2886026,
+                flag: 'https://restcountries.eu/data/alb.svg',
+                currency: 'Albanian lek'
+            },
+            {
+                name: 'Algeria',
+                capital: 'Algiers',
+                languages: ['Arabic'],
+                population: 40400000,
+                flag: 'https://restcountries.eu/data/dza.svg',
+                currency: 'Algerian dinar'
+            },
+            {
+                name: 'American Samoa',
+                capital: 'Pago Pago',
+                languages: ['English', 'Samoan'],
+                population: 57100,
+                flag: 'https://restcountries.eu/data/asm.svg',
+                currency: 'United State Dollar'
+            }
+        ];
+
+        for(const country of countries){
+            console.table(country);
+        }
+
+        // 3
+
+        console.group('Countries Data');
+        for(const country of countries){
+            console.table(country);
+        }
+        console.groupEnd('Countries Data');
+
+
+        // LEVEL 02 - Day 13
+
+        // 1
+
+        console.assert(10>2*10,'10 is not greater than 20');
+
+        // 2
+
+        console.warn('This is a warning');
+        
+        // 3
+        
+        console.error('This is an error');
+
+        // LEVEl 03 - Day 13
+
+        countries = ['Iceland', 'India', 'America', 'Finland', 'Canada'];
+
+        // while
+        console.time('While Loop');
+        let i = 0;
+        while(i<countries.length){
+            console.log(countries[i]);
+            i++;
+        }
+        console.timeEnd('While Loop');
+
+        // for
+        console.time('For Loop');
+        for(let i =0; i<countries.length; i++){
+            console.log(countries[i]);
+        }
+        console.timeEnd('For Loop');
+
+        // for of
+
+        console.time('For of Loop');
+        for(const country of countries){
+            console.log(country);
+        }
+        console.timeEnd('For of Loop');
+
+        // for each
+
+        console.time('ForEach Loop');
+        countries.forEach(x => console.log(x));
+        console.timeEnd('ForEach Loop');
+        
+    </script>
+</body>
+
+</html>

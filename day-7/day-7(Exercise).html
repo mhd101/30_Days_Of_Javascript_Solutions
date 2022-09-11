@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 07 Challenge</title>
+</head>
+
+<body>
+    <script>
+
+        // LEVEL 1 - Day 07
+
+        // 1
+
+        function fullName() {
+            console.log("John Smith");
+        }
+
+        fullName();
+
+        // 2
+
+        function name(firstName, lastName) {
+            let fullName = firstName + ' ' + lastName;
+            return fullName;
+        }
+
+        console.log(name('John', 'Smith'));
+
+        // 3
+
+        function sum(first, second) {
+            let sum = first + second;
+            return sum;
+        }
+
+        console.log(sum(2, 10));
+
+        // 4
+
+        function areaOfRectangle(length, breadth) {
+            let area = length * breadth;
+            return area;
+        }
+
+        console.log(areaOfRectangle(10, 2));
+
+        // 5
+
+        function perimeterOfRectangle(length, breadth) {
+            let perimeter = 2 * (length + breadth);
+            return perimeter;
+        }
+
+        console.log(perimeterOfRectangle(10, 2));
+
+        // 6
+
+        function volumeOfPrism(length, width, height) {
+            let volume = length * width * height;
+            return volume;
+        }
+
+        console.log(volumeOfPrism(2, 3, 5));
+
+        // 7
+
+        let areaOfCircle = (radius) => {
+            let area = Math.PI * radius ** 2;
+            return Math.floor(area);
+        }
+
+        console.log(areaOfCircle(3));
+
+        // 8
+
+        let circumferenceOfCircle = (radius) => {
+            let circumference = Math.floor(2 * Math.PI * radius);
+            return circumference;
+        }
+
+        console.log(circumferenceOfCircle(10));
+
+        // 9
+
+        let density = (mass, volume) => {
+            let density = mass / volume;
+            return density;
+        }
+
+        console.log(density(10, 2));
+
+        // 10
+
+        let speed = (distance, timeTaken) => {
+            let speed = distance / timeTaken;
+            return speed;
+        }
+
+        console.log(speed(10, 2));
+
+        // 11
+
+        let weight = (mass, gravity) => {
+            weight = mass * gravity;
+            return weight;
+        }
+
+        console.log(weight(10, 9));
+
+        // 12
+
+        let celsiusToFahrenheit = (celsius) => {
+            let fahrenheit = (celsius * 9 / 5) + 32;
+            return fahrenheit;
+        }
+
+        console.log(celsiusToFahrenheit(100));
+
+        // 13
+
+        let bmi = (weight, height) => {
+            bmi = weight / (height * height);
+            return (bmi);
+        }
+
+
+        console.log(bmi(96, 2));
+
+        if (bmi < 18.5 && bmi > 0) {
+            console.log('Underweight');
+        } else if (bmi == 18.5 || bmi <= 24.9) {
+            console.log('Normal Weight')
+        } else if (bmi == 25 || bmi <= 29.9) {
+            console.log('Overweight')
+        } else {
+            console.log('Obese');
+        }
+
+        // 14
+
+        let checkSeason = (month) => {
+
+            let input = month.toLowerCase();
+
+            if (input == 'september' || input == 'october' || input == 'november') {
+                console.log("The season is Autumn");
+            } else if (input == 'december' || input == 'january' || input == 'february') {
+                console.log("The season is Winter");
+            } else if (input == 'march' || input == 'april' || input == 'may') {
+                console.log("The season is Spring");
+            } else {
+                console.log("The season is Summer");
+            }
+        }
+
+        checkSeason('june');
+
+        // 15
+
+        let findMax = (value1, value2, value3) => {
+
+            if (value1 > value2 && value1 > value3) {
+                console.log(value1);
+            } else if (value2 > value1 && value2 > value3) {
+                console.log(value2);
+            } else {
+                console.log(value3);
+            }
+        }
+
+        findMax(-6, -1, -5)
+        findMax(-5, 0, 10);
+
+
+        let findMaximum = (...arguments) => {
+            let max = 0;
+            for (const n of arguments) {
+                if (n > max) {
+                    max = n;
+                }
+            }
+            return max;
+        }
+
+        console.log(findMaximum(2, 90))
+
+
+        // LEVEL 2 - Day 07
+
+        // 3
+
+        let printArray = (arr) => {
+            for (const n of arr) {
+                console.log(n);
+            }
+        }
+
+        let arr = [1, 2, 3, 4, 5]
+        printArray(arr);
+
+
+        // 4
+
+        let showDateTime = () => {
+            let d = new Date;
+            let date = d.getDate();
+            let month = d.getMonth();
+            let year = d.getFullYear();
+            let hours = d.getHours();
+            let minutes = d.getMinutes();
+            console.log(`${date}/${month}/${year} ${hours}:${minutes}`);
+        }
+
+        showDateTime();
+
+        // 5
+
+        let swapValue = (x, y) => {
+            let z;
+            z = x;
+            x = y;
+            y = z;
+            console.log("x= " + x + ", y= " + y);
+            console.log();
+        }
+
+        swapValue(10, 2);
+
+        // 6
+
+        let reverseArray = (arr) => {
+            let x = [];
+            for (let i = arr.length - 1; i >= 0; i--) {
+                x.push(arr[i]);
+            }
+            return x;
+        }
+
+        console.log(reverseArray([1, 2, 3]));
+        console.log(reverseArray(['A', 'B', 'C']));
+
+        // 7
+
+        let capitalizeArray = (array) => {
+            let x = [];
+            for (let i = 0; i < array.length; i++) {
+                x.push(array[i].toUpperCase());
+            }
+            return x;
+        }
+
+
+        console.log(capitalizeArray(['hello']));
+
+        // 8
+
+        let addItem = (item) => {
+            let arr = [];
+            arr.push(item);
+            return arr;
+        }
+
+        console.log(addItem('Item1'));
+
+        // 9
+
+        let removeItem = (arr, index) => {
+            arr.splice(index, 1);
+            console.log(arr)
+        }
+
+        removeItem([1, 2, 3, 4, 5], 4);
+
+        // 10
+
+        let sumOfNumbers = (starting, ending) => {
+            let sum = 0;
+            for (let i = starting; i <= ending; i++) {
+                sum = sum + i;
+            }
+            return sum;
+        }
+
+        console.log(sumOfNumbers(1, 5));
+
+        // 11
+
+        let sumOfOddNumbers = (starting, ending) => {
+            let sum = 0;
+            for (let i = starting; i <= ending; i++) {
+                if (i % 2 != 0) {
+                    sum = sum + i;
+                }
+            }
+            return sum;
+        }
+
+        console.log(sumOfOddNumbers(1, 5));
+
+        // 12
+
+        let sumOfEvenNumbers = (starting, ending) => {
+            let sum = 0;
+            for (let i = starting; i <= ending; i++) {
+                if (i % 2 == 0) {
+                    sum = sum + i;
+                }
+            }
+            return sum;
+        }
+
+        console.log(sumOfEvenNumbers(1, 5));
+
+        // 13
+
+        let evenAndOdds = (number) => {
+            let odds = 0;
+            let even = 0;
+            for (let i = 0; i <= number; i++) {
+                if (i % 2 != 0) {
+                    odds++;
+                }
+                else {
+                    even++;
+                }
+            }
+            return `Odd: ${odds} Even: ${even}`;
+        }
+
+        console.log(evenAndOdds(100));
+
+        // 14
+
+        let sumOfArguments = (...numbers) => {
+            let sum = 0;
+            // for(let i = 0; i < numbers.length; i++){
+            //     sum += numbers[i];
+            // }
+            for (const n of numbers) {
+                sum += n;
+            }
+            return sum;
+        }
+
+        console.log(sumOfArguments(10, 2, 3));
+
+        // 15
+
+
+        let generateIp = () => {
+            let a = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+            let c = Math.floor(Math.random() * 255);
+            let d = Math.floor(Math.random() * 255);
+            console.log(`${a}.${b}.${c}.${d}`);
+        }
+
+        generateIp();
+
+        // 16
+
+        let macAddress = () => {
+            let arr = [];
+            let alphaNums = '0123456789ABCDEF';
+            for (let i = 0; i < 6; i++) {
+                let id1 = Math.floor(Math.random() * 15);
+                let id2 = Math.floor(Math.random() * 15);
+                arr.push(alphaNums[id1] + alphaNums[id2]);
+            }
+            return arr.join(':');
+        }
+
+        console.log(macAddress());
+
+        // 17
+
+        let HexaNumber = () => {
+            let hexaNums = [];
+            let randomHexa = 'abcdef0123456789ABCDEF';
+
+            for (let i = 0; i < 6; i++) {
+                let num = Math.floor(Math.random() * randomHexa.length)
+                hexaNums.push(randomHexa[num]);
+            }
+
+            return `#${hexaNums.join('')}`;
+        }
+
+        console.log(HexaNumber());
+
+        // 18
+
+        let userId = () => {
+            let userId = [];
+            let alphaNums = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            for (let i = 0; i <= 6; i++) {
+                let random = Math.floor(Math.random() * alphaNums.length);
+                userId.push(alphaNums[random]);
+            }
+
+            console.log(`${userId.join('')}`);
+        }
+
+        userId();
+
+
+
+        // LEVEL 3 - Day 07
+
+        // 1
+
+        // let userIdGenerator = () => {
+
+        //     let numberOfChar = parseInt(prompt("Enter No. of Characters"));
+        //     let numberOfIds = parseInt(prompt("Enter No. of Characters"));
+
+        //     let userId = () => {
+        //         let userId = [];
+        //         let alphaNums = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        //         for (let i = 0; i < numberOfChar; i++) {
+        //             let random = Math.floor(Math.random() * alphaNums.length);
+        //             userId.push(alphaNums[random]);
+        //         }
+        //         console.log(`${userId.join('')}`);
+        //     }
+
+        //     for (let i = 0; i < numberOfIds; i++) {
+        //         userId();
+        //     }
+
+        // }
+
+        // console.log(userIdGenerator());
+
+        // 2
+
+
+        let rgbColorGenerator = () => {
+
+            let colorRange = [];
+            for (let i = 0; i <= 2; i++) {
+                let random = Math.floor(Math.random() * 255);
+                colorRange.push(random);
+            }
+            return `rgb(${colorRange[0]},${colorRange[1]},${colorRange[2]})`
+        }
+
+        console.log(rgbColorGenerator());
+
+        // 3
+
+        let arrayOfHexaColors = () => {
+            let hexa = '0123456789ABCDEF';
+            let hexaColors = [];
+
+            for (let i = 0; i < (parseInt(Math.random() * hexa.length)); i++) {
+                let array = [];
+                for (let j = 0; j < 6; j++) {
+                    let random = Math.floor(Math.random() * hexa.length);
+                    array.push(hexa[random]);
+                }
+
+                hexaColors.push(`#${array.join('')}`);
+
+            }
+            return hexaColors;
+
+        }
+
+        console.log(arrayOfHexaColors());
+
+        // 4
+
+        let arrayOfRgbColors = () => {
+            let randomRgbColors = [];
+
+            for (let i = 0; i < (parseInt(Math.random() * 10 + 1)); i++) {
+                let rgbArray = [];
+                for (let i = 0; i <= 2; i++) {
+                    let rgb = parseInt(Math.random() * 255);
+                    rgbArray.push(rgb);
+                }
+                randomRgbColors.push(`rgb(${rgbArray[0]},${rgbArray[1]},${rgbArray[2]})`);
+            }
+
+            return randomRgbColors;
+        }
+
+        console.log(arrayOfRgbColors());
+
+        // 5
+
+
+        let convertHexaToRgb = (hex) => {
+            let rgb = hex.match(/.{1,2}/g);
+            let rgbArray = [parseInt(rgb[0], 16), parseInt(rgb[1], 16), parseInt(rgb[2], 16)]
+            console.log(`rgb(${rgbArray[0]},${rgbArray[1]},${rgbArray[2]})`);
+        }
+
+        convertHexaToRgb('b334ef');
+
+        // 7
+
+        let generateColors = (colorType, noOfColors = 1) => {
+
+            if (colorType == 'hexa') {
+                let hexa = '0123456789abcdef';
+                let hexaArray = [];
+                for (let i = 0; i < noOfColors; i++) {
+                    let hexaChars = [];
+                    for (let i = 0; i < 6; i++) {
+                        let random = parseInt(Math.random() * hexa.length);
+                        hexaChars.push(hexa[random]);
+                    }
+
+                    hexaArray.push(`#${hexaChars.join('')}`);
+                }
+                return hexaArray;
+
+            } else if (colorType == 'rgb') {
+                let rgbArray = [];
+                for (let i = 0; i < noOfColors; i++) {
+                    let arr2 = [];
+                    for (let i = 0; i <= 2; i++) {
+                        let rgb = parseInt(Math.random() * 255);
+                        arr2.push(rgb);
+                    }
+                    rgbArray.push(`rgb(${arr2[0]},${arr2[1]},${arr2[2]})`);
+                }
+                return rgbArray;
+            } else {
+                return `Error!!! Enter 'rgb' or 'hexa'`;
+            }
+        }
+
+        console.log(generateColors('rgb', 5));
+
+        // 8
+
+        let shuffleArray = (arr) => {
+            let shuffleArr = [];
+            
+            for(let i = 0; i<arr.length; i++){
+                let random = parseInt(Math.random() * arr.length);
+                shuffleArr.push(arr[random]);
+            }
+
+            
+
+            return shuffleArr;
+        }
+
+        arr = [1, 2, 3, 4, 5];
+        console.log(shuffleArray(arr));
+
+        // 9 
+
+        let factorial = (n) => {
+            if(n == 1){
+                return n;
+            } else {
+                return n * factorial(n-1);
+            }
+        }
+
+        console.log(factorial(5));
+
+        // 10
+
+        let isEmpty = (n) => {
+            if(n.length == 0){
+                return `Empty`;
+            }
+            else {
+                return `Not Empty`;
+            }
+        }
+
+        console.log(isEmpty(''));
+
+        // 11
+
+        let sumOfNumber = (...args) => {
+            let sum = 0;
+            for(let i = 0; i < args.length; i++){
+                sum += args[i];
+
+            }
+            return sum;
+        }
+
+        console.log(sumOfNumber(1,2,3,4));
+        
+        // 12
+
+        let sumOfArrayItems = (arr) => {
+            let sum = 0;
+            for(const n of arr){
+                if(typeof n != 'string')
+                sum += n;
+                else {
+                    console.log('Not of Number Type');
+                }
+
+            }
+            return sum;
+        }
+
+        console.log(sumOfArrayItems([1,2,3,4,5]));
+
+        // 13
+
+        let avgOfArrayItems = (arr) => {
+            let sum = 0;
+            let avg = 0;
+            for(const n of arr){
+                if(typeof n != 'string'){
+                sum += n;
+                }
+                else {
+                    console.log('Not of Number Type');
+                }
+                avg = Math.floor(sum/arr.length);
+            }
+            return avg;
+        }
+
+        console.log(avgOfArrayItems([1,2,3,4,5]));
+
+        // 14
+
+        let modifyArray = (arr) => {
+            
+                if(arr.length < 5) {
+                    return 'Item not Found!'
+                    
+
+                } else {
+                    arr[4] =arr[4].toUpperCase();
+                }
+            return arr;
+        }
+
+        console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango']));
+
+        // 15
+
+        let isPrime = (n) => {
+            if(n<=0 || n==1) {
+                return 'Not Prime';
+            } else if(n ==2 || n==3){
+                return 'Prime';
+            } else {
+                for (let i = 1; i<n**3;i++){
+                    if(n %2 != 0){
+                        return 'Prime'
+                    }
+                }
+            }
+            return 'Not Prime';
+        }
+
+        console.log(isPrime(101));
+
+        // 16
+
+        let unique = (arr) => {
+            for(let i = 1; i < arr.length; i++){
+               for(let x = 0; x < i; x++){
+                if(arr[x] == arr[i]) return false;
+               }
+            }
+            return true;
+        }
+
+        console.log(unique([1,2,3,4,5]));
+
+        // 17
+
+        let sameDataType = (arr) => {
+            for(let i = 1; i< arr.length; i++){
+                for(let x = 0; x< arr.length; x++){
+                    if(typeof arr[x] != typeof arr[i]) 
+                    return false;
+                }
+            }
+            // for(const n of arr){
+            //     for(const x of arr){
+            //         if(typeof x == typeof n) 
+            //         return true;
+            //     }
+            // }
+            return true;
+        }
+
+        console.log(sameDataType([1,3,2,5]));
+
+        // 18
+
+        let isValidVariable = (input) => {
+            if (input.match(/[$_]/gi))
+                return false;
+            return true;
+        }
+
+        console.log(isValidVariable('variableName'));
+
+        // 19
+
+        let sevenRandomNumbers = () => {
+            let randomNumbers = [];
+            for(let i = 0; i<7**2; i++){
+                let random = Math.ceil(Math.random() * 9);
+                if(randomNumbers.indexOf(random) == -1){
+                    randomNumbers.push(random);
+                }
+                if(randomNumbers.length == 7){
+                    break;
+                }
+            }
+            
+            return randomNumbers;
+        }
+
+        console.log(sevenRandomNumbers());
+
+        // 20
+
+        let reverseCountries = (arr) => {
+            let copyArray = [];
+            let reverseArray = [];
+            // Copying Original Array
+            for(let i = 0; i< arr.length; i++){
+                copyArray.push(arr[i]);
+            }
+            console.log("Copied Array: "+copyArray);
+            // Reversing Original Array
+            for(let i = arr.length-1; i>=0; i--){
+                reverseArray.push(arr[i]);
+            }
+            return reverseArray;
+        }
+
+        console.log(reverseCountries(['India', 'Iceland', 'Germany']));
+        
+    </script>
+</body>
+
+</html>
